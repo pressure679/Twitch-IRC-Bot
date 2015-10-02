@@ -19,7 +19,7 @@ Twitch bot guide at https://github.com/justintv/Twitch-API/blob/master/IRC.md
 Used as example:
 http://github.com/Vaultpls/Twitch-IRC-Bot/blob/master/bot.go
 - doc at https://gowalker.org/github.com/Vaultpls/Twitch-IRC-Bot
-- - Added name coloring.
+- - Added name coloring and removed automsg
 http://github.com/paked/go-twitchbot/
 - api for this is at https://github.com/thoj/go-ircevent
 */
