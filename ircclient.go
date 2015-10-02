@@ -45,9 +45,14 @@ func main() {
 	port := flag.String("port", "6667", "The port to connect to server with.")
 	channel := flag.String("channel", "#channel", "Sets the channel for the bot to go into.")
 	nick := flag.String("nick", "naamik01", "The username of the account.")
-	pass := flag.String("pass", "oauth:f0k6mzivg66aj2gsd8mq4udh7o78k7", "Password to use, get it at http://twitchapps.com/tmi")
 	clientid := flag.String("clientid", "9pa5987ukv5x16d4psprgyj2zxrgu0w", "The client ID to use, see Settings - Connections in your account for yours.")
 	maxmsg := flag.Int("spamtime", 5, "Set a minimum time between messages.")
+
+	pass1, err := ioutil.ReadFile("twitch_pass.txt")
+	if err != nil {
+		fmt.Println("Error reading from twitch_pass.txt.  Maybe it isn't created?")
+		os.Exit(1)
+	}
 
 	// configure irc client settings
 	flag.Parse()
@@ -56,7 +61,7 @@ func main() {
 	ircbot.port = *port
 	ircbot.channel = *channel
 	ircbot.nick = *nick
-	ircbot.pass = *pass
+	ircbot.pass = = strings.Replace(string(pass1), "\n", "", 0)
 	ircbot.clientid = *clientid
 	ircbot.maxmsg = int64(*maxmsg)
 
