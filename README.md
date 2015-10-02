@@ -5,9 +5,11 @@ Created in Go!
 Original: https://stackoverflow.com/questions/13342128/simple-golang-irc-bot-keeps-timing-out
 
 <h2>Features:</h2>
-**Console Input** - Don't feel like going in your browser/IRC client? You can type your input into the program and it comes out if the bot were saying it! - although the text creates a newline from both os.Stdin and net.Conn (bufio.NewReader) 
+**Console Input** - Don't feel like going in your browser/IRC client? You can type your input into the program and it comes out if the bot were saying it! - although the text creates a newline from both os.Stdin and net.Conn (bufio.NewReader)
+
 **Nickname coloring**
 This uses github.com/shiena/ansicolor
+
 **Logging**
 Functions for this are readfile and writefile (readfile meant to hook it up to a chatbot using python but project died - I recommend looking at https://github.com/aichaos/rivescript-go)
 
