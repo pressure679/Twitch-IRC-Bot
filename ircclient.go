@@ -45,7 +45,7 @@ func main() {
 	port := flag.String("port", "6667", "The port to connect to server with.")
 	channel := flag.String("channel", "#channel", "Sets the channel for the bot to go into.")
 	nick := flag.String("nick", "naamik01", "The username of the account.")
-	clientid := flag.String("clientid", "9pa5987ukv5x16d4psprgyj2zxrgu0w", "The client ID to use, see Settings - Connections in your account for yours.")
+	clientid := flag.String("clientid", "", "The client ID to use, see Settings - Connections in your account for yours.")
 	maxmsg := flag.Int("spamtime", 5, "Set a minimum time between messages.")
 
 	pass1, err := ioutil.ReadFile("twitch_pass.txt")
